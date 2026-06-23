@@ -1,0 +1,16 @@
+{
+  "name": "ai_concepts",
+  "version": "1.0.0",
+  "description": "A small Node.js sample using the OpenAI client library.",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "openai": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
