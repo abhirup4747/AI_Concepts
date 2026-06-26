@@ -1,21 +1,22 @@
 import { ChatOpenAI } from '@langchain/openai';
 import { HumanMessage, SystemMessage } from '@langchain/core/messages';
+import 'dotenv/config';
 
-const token = process.env.GITHUB_TOKEN;
+const token = process.env.GITHUB_MODELS_TOKEN;
 const endpoint = 'https://models.github.ai/inference';
-const model = 'gpt-4o-miniiiii';
+const model = 'gpt-4o-mini';
 
 const chat = new ChatOpenAI({
   model: model,
-  apiKey: process.env.GITHUB_TOKEN,
+  apiKey: token,
   configuration: {
     baseURL: endpoint,
   },
 });
 
 const conversationHistory = [
-  new SystemMessage('Explain to an expert.'),
-  new HumanMessage('How can I optimize a nested for-loop in JavaScript?'),
+  new SystemMessage(''),
+  new HumanMessage('What is the capital of france?'),
 ];
 
 export async function main() {
