@@ -3,7 +3,7 @@ import { HumanMessage, SystemMessage } from '@langchain/core/messages';
 
 const token = process.env.GITHUB_TOKEN;
 const endpoint = 'https://models.github.ai/inference';
-const model = 'gpt-4o-mini';
+const model = 'gpt-4o-miniiiii';
 
 const chat = new ChatOpenAI({
   model: model,
