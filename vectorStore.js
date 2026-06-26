@@ -2,10 +2,13 @@ import { FaissStore } from '@langchain/community/vectorstores/faiss';
 import { OpenAIEmbeddings } from '@langchain/openai';
 import { Document } from '@langchain/core/documents';
 import fs from 'node:fs';
+import 'dotenv/config';
+
+const token = process.env.GITHUB_MODELS_TOKEN;
 
 const embeddings = new OpenAIEmbeddings({
   // Your GitHub PAT token with `models:read` permissions
-  apiKey: process.env.GITHUB_TOKEN,
+  apiKey: token,
 
   // Base URL pointing to the GitHub Models inference endpoint
   configuration: {

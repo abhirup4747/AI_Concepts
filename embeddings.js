@@ -1,12 +1,13 @@
 import { OpenAIEmbeddings } from '@langchain/openai';
+import 'dotenv/config';
 
-const token = process.env.GITHUB_TOKEN;
+const token = process.env.GITHUB_MODELS_TOKEN;
 const endpoint = 'https://models.github.ai/inference';
 const model = 'text-embedding-3-small';
 
 const embeddings = new OpenAIEmbeddings({
   model: model,
-  apiKey: process.env.GITHUB_TOKEN,
+  apiKey: token,
   configuration: {
     baseURL: endpoint,
   },
